@@ -1,18 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Header from './components/Header';
-import Aboutme from './components/challenges/day01/Aboutme';
-import Footer from './components/challenges/day01/Footer';
+import NameProp from './components/NameProp';
+import Contacts from './components/Contacts';
+import State from './components/State';
+
 
 function App() { // this is the root component
-  const name = 'Austin'; // JS above return statment can be injected into JSX using curly brackets { }
+  const profile = { name: "Austin", age: 25, school: "Wabash", graduationYear: 2018}
   return (
-    <div className = "App">
-      <h1>Welcome to React, {name} </h1>
-      <h2>We just modified our root component</h2>
-      <Header /> {/* This is how you mount a component */}
-      <Aboutme />
-      <Footer />
+    <div className="App">
+    <NameProp  name="Austin"/>
+    {/* <Contacts  name="Austin" age= "25" school= "Wabash" graduationYear = " 2018"/> */}
+    <Contacts {...profile} />
+    <p>------------------</p>
+    <State />
     </div>
   );
 }
