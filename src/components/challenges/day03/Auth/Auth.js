@@ -7,18 +7,18 @@ import Signup from "./Signup/Signup";
 const Auth = () => {
   const [showLogin, setShowLogin] = useState(true);
   function handleToggle() {
-    setShowLogin(false);
+    setShowLogin(!showLogin);
 
-    if (showLogin === true) {
-      setShowLogin(false);
-    } else {
-      setShowLogin(true);
-    }
+    // if (showLogin === true) {
+    //   setShowLogin(false);
+    // } else {
+    //   setShowLogin(true);
+    // }
   }
 
   return (
     <div>
-      {showLogin === true ? <Login /> : <Signup />}
+      {/* {showLogin === true ? <Login /> : <Signup />} */}
       Hello From Auth
       <Login />
       <Signup />
